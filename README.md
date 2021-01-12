@@ -11,9 +11,15 @@
 
 ## Run
 
+### Command
+
 ```
 sudo ./test.sh
 ```
+
+### Screenshot
+
+![image](https://user-images.githubusercontent.com/45416961/104320678-fbb49980-5525-11eb-9e04-8d8677718f09.png)
 
 ## ToDo
 > HTTPS detection
