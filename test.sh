@@ -14,7 +14,7 @@ while read URL
 do
     COUNT=`expr $COUNT + 1`
     SPLIT=`echo $URL | awk '{split($0, arr, "/"); print arr[3]}'`
-    echo "alert tcp any any -> any 80 (msg:\"$SPLIT\"; content:\"GET /\"; content:\"Host: \"; content:\"$SPLIT\"; sid:$COUNT; rev:1;)" >> $RULE
+    echo "alert tcp any any -> any 80 (msg:\"$SPLIT access\"; content:\"GET /\"; content:\"Host: \"; content:\"$SPLIT\"; sid:$COUNT; rev:1;)" >> $RULE
 done < $LIST
 
 
@@ -29,10 +29,14 @@ do
     sleep 1
 done
 
+echo "---------------------------------"
+echo "Running ..."
+
 # request
 while read URL
 do
     #curl -i $URL
+    #echo $URL
     curl $URL &>/dev/null
 done < $LIST
 
