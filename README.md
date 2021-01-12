@@ -19,7 +19,7 @@ sudo ./test.sh
 
 ### Screenshot
 
-![image](https://user-images.githubusercontent.com/45416961/104320678-fbb49980-5525-11eb-9e04-8d8677718f09.png)
+![image](https://user-images.githubusercontent.com/45416961/104321728-5995b100-5527-11eb-836a-cd982d51d12d.png)
 
 ## ToDo
 > HTTPS detection
