@@ -28,7 +28,6 @@ do
     echo $i ...
     sleep 1
 done
-echo "---------------------------------"
 
 # request
 while read URL
