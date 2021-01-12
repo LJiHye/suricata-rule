@@ -14,3 +14,6 @@
 ```
 sudo ./test.sh
 ```
+
+## ToDo
+> HTTPS detection
