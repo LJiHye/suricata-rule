@@ -1,7 +1,7 @@
-# Suricats-rule
+# Suricata-rule
 
 ## Overview
-Create a snort(suricata) rule file to detect specific site traffic.
+" Create a snort(suricata) rule file to detect specific site traffic.
 
 ### Description
 
