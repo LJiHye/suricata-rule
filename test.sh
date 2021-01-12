@@ -31,7 +31,6 @@ done
 echo "---------------------------------"
 
 # request
-# This logic will be changed into for-loop ...
 while read URL
 do
     #curl -i $URL
