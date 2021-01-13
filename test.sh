@@ -14,6 +14,10 @@ while read URL
 do
     COUNT=`expr $COUNT + 1`
     SPLIT=`echo $URL | awk '{split($0, arr, "/"); print arr[3]}'`
+    if [[ $URL =~ "https" ]]; then
+	    echo "alert tls any any -> any 443 (msg:\"$SPLIT access\"; tls.sni; content:\"$SPLIT\"; sid:$COUNT; rev:1;)" >> $RULE
+	    continue
+    fi
     echo "alert tcp any any -> any 80 (msg:\"$SPLIT access\"; content:\"GET /\"; content:\"Host: \"; content:\"$SPLIT\"; sid:$COUNT; rev:1;)" >> $RULE
 done < $LIST
 
@@ -36,7 +40,7 @@ echo "Running ..."
 while read URL
 do
     #curl -i $URL
-    #echo $URL
+    echo $URL
     curl $URL &>/dev/null
 done < $LIST
 
